@@ -129,7 +129,7 @@ header .navbar .dropdown-menu {
   min-width: 60rem;
   margin-top: 20px;
   left: 100%;
-  transform: translate(-40%, 0px);
+  transform: translate(-20%, 0px);
   padding: 30px;
   box-shadow: 0px 5px 50px rgb(155, 155, 155);
 }
@@ -770,6 +770,11 @@ footer .newsletter button {
   .custom {
     padding-top: 3rem;
     margin-top: 3rem;
+  }
+}
+@media (min-width: 600px) and (max-width: 1024px) {
+  header .navbar .dropdown-menu {
+    min-width: 40rem;
   }
 }
 @media (min-width: 992px) and (max-width: 1366px) {
