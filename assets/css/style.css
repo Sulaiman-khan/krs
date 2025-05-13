@@ -120,7 +120,7 @@ header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.614);
 }
 header .navbar {
-  width: 80%;
+  width: 79%;
 }
 header .navbar .dropdown-menu {
   background-color: #ffffff;
@@ -172,7 +172,7 @@ header .navbar .nav-item .nav-link {
   color: #ffffff;
   font-weight: 500;
   transition: 0.4s all;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
 }
 header .navbar .nav-item::before {
   position: absolute;
@@ -185,7 +185,7 @@ header .navbar .nav-item::before {
   transition: 0.4s all;
 }
 header .form {
-  width: 15%;
+  width: 20%;
 }
 header .form form .icon {
   position: absolute;
@@ -657,8 +657,23 @@ footer .newsletter button {
   border-radius: 5px;
 }
 
+.product-details .myProduct2 .swiper-slide {
+  position: relative;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+.product-details .myProduct2 .swiper-slide img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+  display: block;
+}
+.product-details .myProduct2 .swiper-slide.zoomed img {
+  transform: scale(2);
+}
 .product-details .myProduct2 img {
-  height: 500px;
+  height: 500px !important;
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
@@ -752,6 +767,13 @@ footer .newsletter button {
   }
 }
 @media (max-width: 991px) {
+  header .navbar .dropdown-menu {
+    min-width: 15rem;
+    transform: inherit;
+  }
+  header .navbar .dropdown-menu .view-all {
+    padding: 20px 0px;
+  }
   .headr-sec::before {
     display: none;
   }
@@ -783,6 +805,7 @@ footer .newsletter button {
   }
   header .navbar {
     width: 65%;
+    margin: 0 auto;
   }
   header .form {
     width: 30%;
