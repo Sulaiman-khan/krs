@@ -111,23 +111,26 @@ var swiper = new Swiper(".myHero", {
   });
 
 
-  document.querySelectorAll('.myProduct2 .swiper-slide').forEach(slide => {
-    const img = slide.querySelector('img');
+  document.querySelectorAll('.zoom-container').forEach(container => {
+    const img = container.querySelector('.zoom-image');
+    const lens = container.querySelector('.zoom-lens');
 
-    slide.addEventListener('mousemove', function (e) {
-      const rect = slide.getBoundingClientRect();
-      const x = ((e.clientX - rect.left) / rect.width) * 100;
-      const y = ((e.clientY - rect.top) / rect.height) * 100;
+    container.addEventListener('mousemove', function (e) {
+        const { left, top, width, height } = this.getBoundingClientRect();
+        const x = e.clientX - left;
+        const y = e.clientY - top;
+        
+        // Position the lens
+        lens.style.left = `${x}px`;
+        lens.style.top = `${y}px`;
+        lens.style.display = 'block';
 
-      img.style.transformOrigin = `${x}% ${y}%`;
+        // Move the image background for zoom effect
+        img.style.transform = `scale(1.5) translate(-${(x / width) * 100}%, -${(y / height) * 100}%)`;
     });
 
-    slide.addEventListener('mouseenter', function () {
-      slide.classList.add('zoomed');
+    container.addEventListener('mouseleave', function () {
+        lens.style.display = 'none';
+        img.style.transform = `scale(1) translate(0, 0)`;
     });
-
-    slide.addEventListener('mouseleave', function () {
-      slide.classList.remove('zoomed');
-      img.style.transformOrigin = 'center center';
-    });
-  });
+});
