@@ -308,8 +308,15 @@ header .form .badge {
   height: 50px;
   width: 50px;
 }
+.category-sec .cat-item figure {
+  height: 250px;
+}
 .category-sec .cat-item figure img {
+  height: 100%;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
 }
 
 .work .box {
