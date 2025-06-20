@@ -1,6 +1,6 @@
 var swiper = new Swiper(".myHero", {
     spaceBetween: 20,
-    autoplay: true,
+    // autoplay: true,
     loop: true,
     pagination: {
       el: ".swiper-pagination",

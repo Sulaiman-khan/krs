@@ -205,6 +205,13 @@ header .form .badge {
   background-color: #a7c838 !important;
 }
 
+.shirt-img img {
+  transition: 0.4s all;
+}
+.shirt-img:hover img {
+  transform: scale(1.2);
+}
+
 .marquee_container {
   width: 100%;
   overflow: hidden;
@@ -369,7 +376,7 @@ header .form .badge {
   background: linear-gradient(135deg, rgba(33, 47, 63, 0) 50%, #a7c838 50%);
 }
 .custom-top .myCustom .swiper-slide {
-  height: 250px;
+  height: 350px;
 }
 .custom-top .myCustom .swiper-slide img {
   width: 100%;
@@ -381,6 +388,28 @@ header .form .badge {
 .custom {
   padding-top: 10rem;
   margin-top: -8rem;
+}
+
+.choose .choose-box .choose-img {
+  height: 230px;
+}
+.choose .choose-box .choose-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.choose .choose-box .choose-text {
+  height: 100%;
+  background-color: #ffffff;
+  transition: 0.3s all;
+}
+.choose .choose-box:hover .choose-text {
+  background-color: #212f3f;
+  color: #ffffff !important;
+}
+.choose .choose-box:hover .choose-text h4 {
+  color: #ffffff;
 }
 
 .reviews .review-box .profile {
@@ -404,6 +433,15 @@ header .form .badge {
   background-color: #a7c838 !important;
 }
 
+.home-contact {
+  position: relative;
+}
+.home-contact .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .home-contact .form-control {
   padding: 11px;
   border-color: #a7c838;
