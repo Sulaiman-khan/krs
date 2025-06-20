@@ -201,16 +201,16 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.614);
     background-color: $primary-color !important;
   }
 }
-.shirt-img{
-  img{
-transition: 0.4s all;
-  }
-  &:hover{
-  img{
-    transform: scale(1.2);
-  }
-  }
-}
+// .shirt-img{
+//   img{
+// transition: 0.4s all;
+//   }
+//   &:hover{
+//   img{
+//     transform: scale(1.2);
+//   }
+//   }
+// }
 .marquee_container {
   width: 100%;
   overflow: hidden;
